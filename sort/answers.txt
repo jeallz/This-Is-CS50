@@ -1,0 +1,8 @@
+sort1 uses: Bubble Sort
+How do you know?: É muito rápido em listas já ordenadas (sorted), mas fica bem lento em listas invertidas (reversed) e aleatórias. Isso é típico do Bubble Sort, que tem melhor caso O(n) e pior caso O(n²).
+
+sort2 uses: Merge Sort
+How do you know?: É consistentemente o mais rápido em todos os tipos de entrada (sorted, random e reversed). Isso é característico do Merge Sort, que tem complexidade O(n log n) em todos os casos.
+
+sort3 uses: Selection Sort
+How do you know?: Tem tempo semelhante independentemente se a lista está ordenada, invertida ou aleatória. Isso é típico do Selection Sort, que sempre faz O(n²) comparações.

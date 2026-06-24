@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function checkMultiple(btn, correct) {
+                const feedback = document.getElementById('feedback1');
+                document.querySelectorAll('.choice').forEach(b => b.disabled = true);
+                if (correct) {
+                    btn.style.backgroundColor = 'green';
+                    feedback.textContent = 'Correct!';
+                    feedback.style.color = 'green';
+                } else {
+                    btn.style.backgroundColor = 'red';
+                    feedback.textContent = 'Incorrect!';
+                    feedback.style.color = 'red';
+                }
+            }
+
+            function checkFree() {
+                const input = document.getElementById('freeInput');
+                const feedback = document.getElementById('feedback2');
+                if (input.value.trim().toLowerCase() === 'harvard') {
+                    input.style.backgroundColor = 'green';
+                    feedback.textContent = 'Correct!';
+                    feedback.style.color = 'green';
+                } else {
+                    input.style.backgroundColor = 'red';
+                    feedback.textContent = 'Incorrect!';
+                    feedback.style.color = 'red';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice</h2>
+                <hr>
+                <p>What is the capital of France?</p>
+                <button class="choice" onclick="checkMultiple(this, false)">Berlin</button>
+                <button class="choice" onclick="checkMultiple(this, false)">Madrid</button>
+                <button class="choice" onclick="checkMultiple(this, true)">Paris</button>
+                <button class="choice" onclick="checkMultiple(this, false)">Rome</button>
+                <p id="feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <p>What university offers CS50?</p>
+                <input type="text" id="freeInput" placeholder="Type your answer">
+                <button onclick="checkFree()">Confirm</button>
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>
