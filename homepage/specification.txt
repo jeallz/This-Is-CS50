@@ -1,0 +1,40 @@
+SPECIFICATION
+=============
+
+This file lists, in a simple way, 10 HTML tags and 5 CSS properties
+used to build this portfolio website (index.html, skills.html,
+projects.html, contact.html, styles.css and script.js).
+
+10 HTML TAGS USED
+------------------
+1. <html>    - wraps the whole page
+2. <head>    - holds page info (title, links to css, etc.)
+3. <body>    - holds everything the visitor sees
+4. <header>  - top area with my name and the navigation menu
+5. <nav>     - holds the menu links between pages
+6. <ul>/<li> - used to make lists (menu, skills, social links)
+7. <a>       - links to other pages and social media
+8. <section> - used to separate parts of the content (About, Skills...)
+9. <img>     - used to show my profile picture
+10. <button> - used for the "say hi" and theme toggle buttons
+
+5 CSS PROPERTIES USED
+-----------------------
+1. background-color - sets the background color of the page/sections
+2. color            - sets the text color
+3. padding           - adds space inside elements
+4. border-radius     - rounds the corners of boxes and buttons
+5. display           - controls how elements are shown (e.g. flex)
+
+JAVASCRIPT
+-----------
+JavaScript is used in script.js to display the current year in the
+footer, show a greeting message when the "say hi" button is clicked,
+and add a light/dark theme toggle button that saves the user's
+preference using localStorage.
+
+BOOTSTRAP
+----------
+Bootstrap 5 is used on all four pages by linking its CDN stylesheet,
+providing base typography, spacing resets, and responsive utilities
+that complement the custom styles defined in styles.css.
