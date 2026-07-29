@@ -54,8 +54,8 @@ This repository is shared for **educational reference** and **portfolio demonstr
 
 For inquiries, collaboration opportunities, or feedback:
 
-- **Email:** [your-email@domain.com](mailto:your-email@domain.com)
-- **LinkedIn:** [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
+- **Email:** [estevancv123@gmail.com](mailto:estevancv123@gmail.com)
+- **LinkedIn:** [linkedin.com/in/jeallz](https://linkedin.com/in/jeallz)
 
 ---
 
