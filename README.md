@@ -1,5 +1,7 @@
 # CS50x Harvard – Problem Sets & Projects
 
+<img width="2112" height="1632" alt="image" src="https://github.com/user-attachments/assets/2bee24e8-0953-4bcc-9f1b-8ecb089545ef" />
+
 ---
 
 ## Overview
