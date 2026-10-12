@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}History{% endblock %}
+{% block main %}
+<div class="mb-4 text-start"><p class="eyebrow">ACTIVITY</p><h1 class="h2">Transaction history</h1><p class="text-secondary">Every purchase and sale on your account.</p></div>
+<div class="table-responsive content-card">
+<table class="table table-hover align-middle mb-0">
+<thead><tr><th>Type</th><th>Symbol</th><th class="text-end">Shares</th><th class="text-end">Price</th><th>Date and time</th></tr></thead>
+<tbody>
+{% for transaction in transactions %}
+<tr><td><span class="transaction-type {{ 'buy' if transaction.type == 'BUY' else 'sell' }}">{{ transaction.type }}</span></td><td><strong>{{ transaction.symbol }}</strong></td><td class="text-end">{{ transaction.shares }}</td><td class="text-end">{{ transaction.price | usd }}</td><td>{{ transaction.transacted }}</td></tr>
+{% else %}
+<tr><td colspan="5" class="text-center text-secondary py-4">No transactions yet.</td></tr>
+{% endfor %}
+</tbody></table></div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}Quote result{% endblock %}
+{% block main %}
+<div class="content-card">
+<h1 class="h3 mb-4">Quote result</h1>
+<p><strong>{{ stock.name }} ({{ stock.symbol }})</strong></p>
+<p class="price">{{ stock.price | usd }}</p>
+<a class="btn btn-outline-primary" href="/quote">Look up another stock</a>
+</div>
+{% endblock %}

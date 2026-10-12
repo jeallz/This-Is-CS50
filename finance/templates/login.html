@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}Log in{% endblock %}
+{% block main %}
+<div class="form-card">
+<h1 class="h3 mb-4">Log in</h1>
+<form action="/login" method="post">
+    <div class="mb-3"><input autocomplete="username" autofocus class="form-control" name="username" placeholder="Username" required type="text"></div>
+    <div class="mb-3"><input autocomplete="current-password" class="form-control" name="password" placeholder="Password" required type="password"></div>
+    <button class="btn btn-primary w-100" type="submit">Log in</button>
+</form>
+<p class="mt-3 mb-0 text-secondary">New here? <a href="/register">Create an account</a>.</p>
+</div>
+{% endblock %}

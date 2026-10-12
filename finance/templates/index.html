@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}Portfolio{% endblock %}
+{% block main %}
+<div class="page-heading">
+    <div><p class="eyebrow">YOUR ACCOUNT</p><h1 class="h2">Portfolio</h1></div>
+    <a class="btn btn-primary" href="/buy">＋ Buy shares</a>
+</div>
+<div class="table-responsive content-card">
+<table class="table table-hover align-middle mb-0">
+<thead><tr><th>Symbol</th><th>Company</th><th class="text-end">Shares</th><th class="text-end">Price</th><th class="text-end">Total value</th></tr></thead>
+<tbody>
+{% for stock in stocks %}
+<tr>
+<td><strong>{{ stock.symbol }}</strong></td><td>{{ stock.name }}</td><td class="text-end">{{ stock.shares }}</td>
+<td class="text-end">{% if stock.price is not none %}{{ stock.price | usd }}{% else %}<span class="text-secondary">Unavailable</span>{% endif %}</td>
+<td class="text-end">{% if stock.total is not none %}{{ stock.total | usd }}{% else %}—{% endif %}</td>
+</tr>
+{% else %}
+<tr><td class="text-center text-secondary py-4" colspan="5">No stocks in your portfolio yet. Get a quote or buy your first share.</td></tr>
+{% endfor %}
+</tbody>
+<tfoot>
+<tr><th colspan="4" class="text-end">Stocks total</th><th class="text-end">{{ stock_total | usd }}</th></tr>
+<tr><th colspan="4" class="text-end">Cash balance</th><th class="text-end">{{ cash | usd }}</th></tr>
+<tr class="grand-total"><th colspan="4" class="text-end">Grand total</th><th class="text-end">{{ grand_total | usd }}</th></tr>
+</tfoot>
+</table>
+</div>
+<div class="quick-links"><a href="/quote">Get a quote</a><a href="/history">View transaction history</a><a href="/add_cash">Add simulated cash</a></div>
+{% endblock %}

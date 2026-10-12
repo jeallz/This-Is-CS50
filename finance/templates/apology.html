@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %}Sorry{% endblock %}
+{% block main %}
+<div class="content-card apology-card">
+<div class="display-5 mb-3">Something went wrong</div>
+<p class="mb-1">{{ bottom | replace("-", " ") | replace("~", "") }}</p>
+<a class="btn btn-outline-primary mt-3" href="javascript:history.back()">Go back</a>
+</div>
+{% endblock %}

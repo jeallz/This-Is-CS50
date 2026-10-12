@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}Add cash{% endblock %}
+{% block main %}
+<div class="form-card">
+<h1 class="h3 mb-2">Add simulated cash</h1>
+<p class="text-secondary mb-4">Current balance: <strong>{{ cash | usd }}</strong></p>
+<form action="/add_cash" method="post">
+    <div class="mb-3"><input autofocus class="form-control" name="amount" placeholder="Amount in USD (e.g. 250.00)" required type="number" min="0.01" step="0.01"></div>
+    <button class="btn btn-primary w-100" type="submit">Add cash</button>
+</form>
+<p class="small text-secondary mt-3 mb-0">This updates your practice account only; no real money is involved.</p>
+</div>
+{% endblock %}

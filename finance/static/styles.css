@@ -1,0 +1,181 @@
+body {
+    background: #f4f6fa;
+    color: #202938;
+    min-height: 100vh;
+}
+
+.navbar {
+    padding: .9rem 1.5rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 750;
+    letter-spacing: -.04em;
+}
+
+.blue {
+    color: #74a7ff;
+}
+
+.red {
+    color: #ff8178;
+}
+
+.yellow {
+    color: #ffd166;
+}
+
+.green {
+    color: #62d6a5;
+}
+
+main.container {
+    max-width: 1050px;
+}
+
+.form-card,
+.content-card {
+    background: #fff;
+    border: 1px solid #e5e9f0;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(25, 39, 61, .05);
+}
+
+.form-card {
+    max-width: 440px;
+    margin: 1rem auto;
+    padding: 2rem;
+}
+
+.content-card {
+    padding: 1rem;
+}
+
+.form-control,
+.form-select {
+    min-height: 46px;
+    border-color: #dce2eb;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #6d8df7;
+    box-shadow: 0 0 0 .2rem rgba(109, 141, 247, .15);
+}
+
+.btn-primary {
+    background: #4968e8;
+    border-color: #4968e8;
+}
+
+.btn-primary:hover {
+    background: #354fca;
+    border-color: #354fca;
+}
+
+.page-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.eyebrow {
+    color: #78849a;
+    font-size: .75rem;
+    font-weight: 750;
+    letter-spacing: .12em;
+    margin-bottom: .4rem;
+}
+
+.table {
+    --bs-table-bg: transparent;
+}
+
+.table thead th {
+    color: #778196;
+    font-size: .78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    border-bottom-color: #e7ebf2;
+    white-space: nowrap;
+}
+
+.table td,
+.table th {
+    padding: .95rem .8rem;
+}
+
+.table tfoot th {
+    border-top: 1px solid #e7ebf2;
+}
+
+.grand-total th {
+    color: #263b87;
+    font-size: 1.02rem;
+}
+
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.quick-links a,
+a {
+    color: #4968e8;
+}
+
+.price {
+    font-size: 2.4rem;
+    font-weight: 750;
+    letter-spacing: -.04em;
+}
+
+.transaction-type {
+    display: inline-block;
+    min-width: 58px;
+    padding: .3rem .55rem;
+    border-radius: 999px;
+    font-size: .72rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.transaction-type.buy {
+    color: #16794a;
+    background: #e1f7eb;
+}
+
+.transaction-type.sell {
+    color: #9a4b17;
+    background: #fff0dc;
+}
+
+.apology-card {
+    max-width: 620px;
+    margin: auto;
+    padding: 2rem;
+}
+
+@media (max-width: 576px) {
+    .form-card {
+        padding: 1.4rem;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .table td,
+    .table th {
+        padding: .7rem .55rem;
+    }
+}
